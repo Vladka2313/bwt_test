@@ -21,7 +21,7 @@ session_start();
     <input name="password" type="password" size="15" maxlength="15">
     </p>
 <p>
-    <input type="submit" name="submit" value="Войти">
+        <input type="submit" name="submit" value="Войти">
     <br>
     <a href="reg.php">Зарегистрироваться</a>
     </p></form>

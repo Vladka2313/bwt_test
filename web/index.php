@@ -1,7 +1,40 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Vladka
- * Date: 09.04.2016
- * Time: 15:47
- */
+//  вся процедура работает на сессиях. Именно в ней хранятся данные  пользователя, пока он находится на сайте. Очень важно запустить их в  самом начале странички!!!
+session_start();
+?>
+<html>
+<head>
+    <title>Главная страница</title>
+</head>
+<body>
+<h2>Главная страница</h2>
+<form action="testreg.php" method="post">
+
+<p>
+    <label>Ваш логин:<br></label>
+    <input name="login" type="text" size="15" maxlength="15">
+    </p>
+<p>
+
+    <label>Ваш пароль:<br></label>
+    <input name="password" type="password" size="15" maxlength="15">
+    </p>
+<p>
+    <input type="submit" name="submit" value="Войти">
+    <br>
+    <a href="reg.php">Зарегистрироваться</a>
+    </p></form>
+<br>
+<?php
+
+if (empty($_SESSION['login']) or empty($_SESSION['id']))
+{
+    echo "Вы вошли на сайт, как гость<br>";
+}
+else
+{
+    echo "Вы вошли на сайт";
+}
+?>
+</body>
+</html>

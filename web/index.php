@@ -3,6 +3,7 @@
 session_start();
 ?>
 <html>
+<meta charset="utf-8">
 <head>
     <title>Главная страница</title>
 </head>

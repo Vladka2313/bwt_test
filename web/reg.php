@@ -30,7 +30,11 @@
     </p>
 <p>
     <label>Email:<br></label>
-    <input name="login" type="email" size="15" maxlength="25">
+    <input name="email" type="email" size="15" maxlength="25">
+    </p>
+<p>
+    <label>Login:<br></label>
+    <input name="login" type="text" size="15" maxlength="25">
     </p>
 <p>
     <label>Пароль:<br></label>

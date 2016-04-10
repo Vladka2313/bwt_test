@@ -20,14 +20,27 @@ $login = trim($login);
 $password = trim($password);
 // подключаемся к базе
 include ("bd.php");// файл bd.php должен быть в той же папке, что и все остальные, если это не так, то просто измените путь
+//$id = 1;
+//$conn = new PDO('mysql:host=bwt_test;dbname=users', 'root', '');
+$result = $conn->query('SELECT * FROM reg WHERE login= '.$conn->quote($login));
+//$stmt = $conn->prepare('SELECT * FROM reg WHERE id = :id');
+//$stmt->execute(array('id' => $id));
+//$result = $stmt->fetchAll();
+if ( count($result) ) {
+    foreach($result as $myrow) {
+   // print_r($myrow);
+    }
+    } else {
+    echo "Ничего не найдено.";
+    }
 
-$result = mysql_query("SELECT * FROM reg WHERE login='$login'",$db); //извлекаем из базы все данные о пользователе с введенным логином
-$myrow = mysql_fetch_array($result);
+//$myrow = $conn->fetch_array($result,MYSQLI_NUM);
 if (empty($myrow['password']))
 {
     //если пользователя с введенным логином не существует
     exit ("Извините, введённый вами login или пароль неверный.");
 }
+
 else {
     //если существует, то сверяем пароли
     if ($myrow['password']==$password) {

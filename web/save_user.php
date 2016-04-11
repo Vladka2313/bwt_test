@@ -39,24 +39,16 @@ $login = trim($login);
 $password = trim($password);
 
 include ("bd.php");
-//$result = $conn->query("SELECT id FROM reg WHERE login='$login'");
+
 $result = $conn->query('SELECT * FROM reg WHERE login= '.$conn->quote($login));
-$result->execute();
-$myrow = $result->fetchall();
-/*while( $myrow=$result->fetchAll() )
-{
-    echo $myrow['id']."-".$myrow['login']."<br>";
-}*/
-//$myrow = $conn->fetch_array($result);
-/*if ( count($result) ) {
+
+if ( count($result) ) {
     foreach($result as $myrow) {
       //  print_r($myrow);
     }
 } else {
     echo "Yes";
 }
-*/
-//$myrow = $conn->fetchall(PDO::FETCH_BOTH);
 
 if (!empty($myrow['id'])) {
     exit ("Извините, введённый вами логин уже зарегистрирован. Введите другой логин.");
@@ -64,7 +56,7 @@ if (!empty($myrow['id'])) {
 
 $result2 = $conn->query ("INSERT INTO reg (name,last_name,date,sex,email,login,password) VALUES('$name','$last_name','$date','$sex','$email','$login','$password')");
 
-if ($result2=='TRUE')
+if ($result2)
 {
     echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='index.php'>Главная страница</a>";
 }

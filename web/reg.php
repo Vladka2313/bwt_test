@@ -1,4 +1,4 @@
-<html>
+<html xmlns:h="http://www.w3.org/1999/XSL/Transform">
 <meta charset="utf-8">
     <head>
 
@@ -9,8 +9,8 @@
     <form action="save_user.php" method="post">
 <p>
         <label>Имя пользователя:<br></label>
-        <input name="name" type="text" size="15" maxlength="15">
-    </p>
+        <input name="name" type="text" size="15" maxlength="15"    required="true">
+      </p>
         <p>
             <label>Фамилия:<br></label>
             <input name="last_name" type="text" size="15" maxlength="25">

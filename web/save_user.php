@@ -10,6 +10,20 @@ if (isset($_POST['email'])) { $email = $_POST['email']; if ($email == '') { unse
 if (isset($_POST['login'])) { $login = $_POST['login']; if ($login == '') { unset($login);} }
 if (isset($_POST['password'])) { $password=$_POST['password']; if ($password =='') { unset($password);} }
 
+echo "<html>
+    <form action=\"save_user.php\" method=\"post\">
+    <label>Ваше имя:<br></label>
+    <input name=\"name\" type=\"text\" size=\"15\" maxlength=\"15\">
+    <input type=\"submit\" name=\"submit\" value=\"Проверка\">
+</form>
+</html>";
+
+if (empty($_POST['name']))
+{
+    echo "Пусто";
+}
+else { echo "Непусто";}
+
 if (empty($name) or empty($last_name) or empty($date) or empty($sex) or empty($email) or empty($login) or empty($password)   )
 {
     exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
@@ -37,6 +51,8 @@ $sex = trim($sex);
 $email = trim($email);
 $login = trim($login);
 $password = trim($password);
+
+
 
 include ("bd.php");
 

@@ -8,9 +8,9 @@ if (isset($_POST['password'])) { $password=$_POST['password']; if ($password =='
 
 if (empty($login) or empty($password)) 
 {
-    exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
+    echo ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
 }
-
+else {
 $login = stripslashes($login);
 $login = htmlspecialchars($login);
 $password = stripslashes($password);
@@ -27,8 +27,6 @@ if ( count($result) ) {
     foreach($result as $myrow) {
    // print_r($myrow);
     }
-    } else {
-    echo "Ничего не найдено.";
     }
 
 if (empty($myrow['password']))
@@ -36,18 +34,18 @@ if (empty($myrow['password']))
     
     exit ("Извините, введённый вами login или пароль неверный.");
 }
-
 else {
     
     if ($myrow['password']==$password) {
         
         $_SESSION['login']=$myrow['login'];
         $_SESSION['id']=$myrow['id'];
-        echo "Вы успешно вошли на сайт! <a href='pogoda.php'>Погода</a>";
+        echo "Вы успешно вошли на сайт!<br> <a href='index.php'><br>Главная страница</a>";
+        //echo "Вы успешно вошли на сайт!<br> <a href='pogoda.php'><br>Погода</a>";
     }
     else {
         
-        exit ("Извините, введённый вами login или пароль неверный.");
+        exit ("Извините, введённый вами пароль неверный.");
     }
-}
+}}
 ?>

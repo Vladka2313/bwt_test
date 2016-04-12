@@ -23,19 +23,21 @@ session_start();
 <p>
         <input type="submit" name="submit" value="Войти">
     <br>
-    <a href="reg.php">Зарегистрироваться</a>
+    <a href="reg.php"><br>Зарегистрироваться</a>
     </p></form>
 <br>
 <?php
-
+//if (isset($_POST['name'])){
 if (empty($_SESSION['login']) or empty($_SESSION['id']))
 {
-    echo "Вы вошли на сайт, как гость<br>";
+    echo "Вы вошли на сайт, как гость<br >";
 }
 else
 {
-    echo "Вы вошли на сайт";
+    echo "Вы вошли на сайт, как ".$_SESSION['login'];
+    echo "<br><a href=\"pogoda.php\"><br>Погода</a>";
 }
+//}
 ?>
 </body>
 </html>

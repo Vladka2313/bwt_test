@@ -17,17 +17,20 @@ echo "<html>
     <input type=\"submit\" name=\"submit\" value=\"Проверка\">
 </form>
 </html>";
-
-if (empty($_POST['name']))
+if (isset($_POST['name'])){
+    if (empty($_POST['name']))
 {
-    echo "Пусто";
+    echo "Пусто<br>";
 }
-else { echo "Непусто";}
+else { echo "Непусто<br>";}}
 
 if (empty($name) or empty($last_name) or empty($date) or empty($sex) or empty($email) or empty($login) or empty($password)   )
+
 {
-    exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
-}
+    echo ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
+    
+    }
+else {
 
 $name = stripslashes($name);
 $name = htmlspecialchars($name);
@@ -78,6 +81,6 @@ if ($result2)
 }
 else {
     echo "Ошибка! Вы не зарегистрированы.";
-}
+}}
 ?>
 

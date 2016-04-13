@@ -38,6 +38,8 @@ else
     echo "Вы вошли на сайт, как ".$_SESSION['login'];
     echo "<br><a href=\"pogoda.php\"><br>Погода</a>";
     echo "<br><a href=\"beckup.php\"><br>Обратная связь</a>";
+    echo "<br><a href=\"exit.php\"><br>Выход</a>";
+
 }
 //}
 ?>

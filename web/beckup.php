@@ -2,10 +2,10 @@
 <meta charset="utf-8">
 <head>
 
-    <title>Отзывы</title>
+    <title>Обратная связь</title>
 </head>
 <body>
-<h2>Отзывы</h2>
+<h2>Обратная связь</h2>
 <form action="beckup.php" method="post">
     <p>
         <label>Имя пользователя:<br></label>
@@ -53,20 +53,6 @@ else {
     $email = trim($email);
 
     include("bd.php");
-
-   /* $result = $conn->query('SELECT * FROM beckup WHERE name= '.$conn->quote($name));
-
-    if ( count($result) ) {
-        foreach($result as $myrow) {
-            //  print_r($myrow);
-        }
-    } else {
-        echo "Yes";
-    }
-
-    if (!empty($myrow['id'])) {
-        exit ("Извините, введённый вами логин уже зарегистрирован. Введите другой логин.");
-    }*/
 
     $result2 = $conn->query("INSERT INTO beckup (name,email,comment) VALUES('$name','$email','$comment')");
     if ($result2) {

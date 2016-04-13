@@ -31,13 +31,13 @@ session_start();
 if (empty($_SESSION['login']) or empty($_SESSION['id']))
 {
     echo "Вы вошли на сайт, как гость<br >";
-    echo "<br><a href=\"beckup.php\"><br>Отзывы</a>";
+    echo "<br><a href=\"beckup.php\"><br>Обратная связь</a>";
 }
 else
 {
     echo "Вы вошли на сайт, как ".$_SESSION['login'];
     echo "<br><a href=\"pogoda.php\"><br>Погода</a>";
-    echo "<br><a href=\"beckup.php\"><br>Отзывы</a>";
+    echo "<br><a href=\"beckup.php\"><br>Обратная связь</a>";
 }
 //}
 ?>

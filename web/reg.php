@@ -17,11 +17,14 @@
         </p>
         <p>
             <label>Дата рождения:<br></label>
-            <input name="date" type="text" size="15" maxlength="15">
+            <input name="date" type="date" size="15" maxlength="15">
         </p>
         <p>
             <label>Ваш пол:<br></label>
-            <input name="sex" type="text" size="15" maxlength="15">
+            <select name="sex" >
+                <option value="m"> мужской </option>
+                <option value="f"> женский </option>
+            </select>
         </p>
         <p>
             <label>Email:<br></label>

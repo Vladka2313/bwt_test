@@ -13,11 +13,11 @@
     </p>
     <p>
         <label>Email:<br></label>
-        <input name="email" type="email" size="15"  maxlength="25">
+        <input name="email" type="email" size="15"  maxlength="25" required="true">
     </p>
     <p>
         <label>Оставить Отзыв:<br></label>
-        <textarea name="comment" cols="40" rows="7"></textarea>
+        <textarea name="comment" cols="40" rows="7" required="true"></textarea>
         <!--<input name="comment" type="text" size="30" weight="50" maxlength="100">-->
     </p>
     <p>
@@ -64,6 +64,6 @@ else {
     } else {
         echo "Ошибка!";
     }
-    
+
 }}
 ?>

@@ -1,5 +1,6 @@
 <html>
 <meta charset="utf-8">
+<link href = "css/bootstrap.css" rel="stylesheet">
 </html>
 <?php
 session_start();

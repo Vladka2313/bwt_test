@@ -1,7 +1,6 @@
 <html xmlns:h="http://www.w3.org/1999/XSL/Transform">
 <meta charset="utf-8">
 <head>
-
     <title>Обратная связь</title>
 </head>
 <body>

@@ -1,9 +1,17 @@
-<html>
-<meta charset="utf-8">
-<link href = "css/bootstrap.css" rel="stylesheet">
-</html>
 <?php
+include ("func.php");
+$mass = ['index.php' => 'Приветствие', 'pogoda.php' => 'Погода', 'beckup2.php' => 'Обратная связь', 'feedback.php'=>'Коментарии'];
+$mass2 = ['index.php' => 'Вход', 'reg.php' => 'Регистрация', 'beckup.php' => 'Обратная связь'];
 session_start();
+if (empty($_SESSION['login']) or empty($_SESSION['id'])) {
+    $title = "<title > Главная страница </title >";
+}else
+{$title = "<title > Страница пользователя </title >";}
+require "header.php";
+?>
+<body>
+<?php
+
 if (isset($_SESSION['login']))
 {
 if (empty($_SESSION['login']) or empty($_SESSION['id']))
@@ -15,20 +23,18 @@ else
 {
     $a="Добрый день ".$_SESSION['login'];
     echo "
-<html>
-<head>
-    <title>Страница пользователя</title>
-</head>
-<body>
 <div class=\"navbar-header\">
 <h2>Страница пользователя</h2>
 <br>
-    <ul class=\"nav nav-pills\">
+    <!-- <ul class=\"nav nav-pills\">
         <li class=\"active\"> <a data-toggle=\"tab\" href=\"#panel1\">Приветствие</a></li>
         <li ><a href=\"pogoda.php\">Погода</a></li>
         <li> <a href=\"beckup.php\">Обратная связь</a></li>
         <li> <a href=\"feedback.php\">Коментарии</a></li>
-        </ul>
+        </ul>-->
+     ";
+    echo (first_function($mass));
+ echo"
 <div class=\"tab-content\">
     <div id=\"panel1\" class=\"tab-pane fade in active\">
         <h3>$a</h3>
@@ -39,22 +45,20 @@ else
 <br>
 <button type=\"submit\" class=\"btn btn-success\">Выйти</button>
 </form>
-</body>
-</html>";
+";
 } } else {?>
-<html>
-<head>
-    <title>Главная страница</title>
-</head>
-<body>
 <div class="navbar-header">
 <h2>Главная страница</h2>
     <br>
+    <?php
+    echo (first_function($mass2));
+    ?>
+    <!--
     <ul class="nav nav-pills">
         <li class="active"><a data-toggle="tab" href="#panel1">Вход</a></li>
         <li> <a href="reg.php">Регистрация</a></li>
         <li> <a href="beckup2.php">Обратная связь</a></li>
-        </ul>
+        </ul>-->
 <div class="tab-content">
     <div id="panel1" class="tab-pane fade in active">
         <h3>Вход</h3>

@@ -1,21 +1,25 @@
-<html xmlns:h="http://www.w3.org/1999/XSL/Transform">
-<meta charset="utf-8">
-<link href = "css/bootstrap.css" rel="stylesheet">
-<head>
-    <title>Обратная связь</title>
-</head>
-<body>
+<?php
+include ("func.php");
+$mass = ['index.php' => 'Приветствие', 'pogoda.php' => 'Погода', 'beckup2.php' => 'Обратная связь', 'feedback.php'=>'Коментарии'];
+session_start();
+$title = "<title > Обратная связь </title >";
+require "header.php";
+?>
 <div class="navbar-header">
-    <h2>Главная страница</h2>
-    <br>
-    <ul class="nav nav-pills">
-        <li ><a href="index.php">Вход</a></li>
-        <li> <a href="reg.php">Регистрация</a></li>
-        <li class="active"> <a data-toggle="tab" href="beckup2.php">Обратная связь</a></li>
-        </ul>
+    <h2>Страница пользователя</h2>
+      <br>
+    <!--   <ul class="nav nav-pills">
+       <li ><a href="index.php">Вход</a></li>
+         <li> <a href="reg.php">Регистрация</a></li>
+         <li class="active"> <a data-toggle="tab" href="beckup2.php">Обратная связь</a></li>
+         </ul>-->
+        <?php
+        echo (first_function($mass));
+        ?>
+
     <div class="tab-content">
         <div id="beckup2.php" class="tab-pane fade in active">
-            <h3>Обратная связь</h3>
+           
             <br>
             <form data-toggle="validator" role="form" action="beckup2.php" method="post">
                 <div class="form-group">
@@ -44,7 +48,6 @@
 </body>
 </html>
 <?php
-session_start();
 if (isset($_POST['name'])) { $name = $_POST['name']; if ($name == '') { unset($name);} }
 if (isset($_POST['email'])) { $email=$_POST['email']; if ($email =='') { unset($email);} }
 if (isset($_POST['comment'])) { $comment=$_POST['comment']; if ($comment =='') { unset($comment);} }

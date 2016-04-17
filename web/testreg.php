@@ -41,6 +41,7 @@ else {
         
         $_SESSION['login']=$myrow['login'];
         $_SESSION['id']=$myrow['id'];
+        
         echo "Вы успешно вошли на сайт!<br> <a href='index.php'><br>Меню</a>";
         //echo "Вы успешно вошли на сайт!<br> <a href='pogoda.php'><br>Погода</a>";
     }

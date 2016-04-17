@@ -1,23 +1,26 @@
-<html xmlns:h="http://www.w3.org/1999/XSL/Transform">
-<meta charset="utf-8">
-<link href = "css/bootstrap.css" rel="stylesheet">
-<head>
-    <title>Обратная связь</title>
-</head>
+<?php
+include ("func.php");
+$mass2 = ['index.php' => 'Вход', 'reg.php' => 'Регистрация', 'beckup.php' => 'Обратная связь'];
+session_start();
+$title = "<title >Обратная связь</title >";
+require "header.php";
+?>
 <body>
 <div class="navbar-header">
-    <h2>Страница пользователя</h2>
+    <h2>Главная страница</h2>
     <br>
-    <ul class="nav nav-pills">
+    <!--<ul class="nav nav-pills">
         <li ><a href="index.php">Приветствие</a></li>
         <li ><a href="pogoda.php">Погода</a></li>
         <li class="active"> <a data-toggle="tab" href="beckup.php">Обратная связь</a></li>
         <li> <a href="feedback.php">Коментарии</a></li>
-    </ul>
+    </ul>-->
+   <?php
+    echo (first_function($mass2));
+   ?>
 <div class="tab-content">
     <div id="beckup.php" class="tab-pane fade in active">
-        <h3>Обратная связь</h3>
-        <br>
+              <br>
 <form data-toggle="validator" role="form" action="beckup.php" method="post">
     <div class="form-group">
         <label for="name">Имя пользователя:</label>
@@ -45,7 +48,7 @@
 </body>
 </html>
 <?php
-session_start();
+
 if (isset($_POST['name'])) { $name = $_POST['name']; if ($name == '') { unset($name);} }
 if (isset($_POST['email'])) { $email=$_POST['email']; if ($email =='') { unset($email);} }
 if (isset($_POST['comment'])) { $comment=$_POST['comment']; if ($comment =='') { unset($comment);} }

@@ -8,7 +8,7 @@
 <div class="navbar-header">
     <h2>Страница пользователя</h2>
     <br>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-pills">
         <li ><a href="index.php">Приветствие</a></li>
         <li ><a href="pogoda.php">Погода</a></li>
         <li class="active"> <a data-toggle="tab" href="beckup.php">Обратная связь</a></li>
@@ -27,9 +27,9 @@
         <label for="email">Email:</label>
         <input name="email" type="email" class="form-control" id="email" placeholder="email" required>
     </div>
-    <div class="form-group">
+    <div class="form-group" >
         <label for="comment">Оставить Отзыв:</label>
-        <input name="comment" type="text" class="form-control" id="comment" required >
+        <input name="comment" type="text" class="form-control" id="comment" style="height:150px " required >
     <br>
     </div>
     <img src="capcha.php" alt="защитный код">

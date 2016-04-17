@@ -14,15 +14,16 @@ if (empty($_SESSION['login']) or empty($_SESSION['id']))
 else
 {
     $a="Добрый день ".$_SESSION['login'];
-    echo "<html>
+    echo "
+<html>
 <head>
     <title>Страница пользователя</title>
-    </head>
+</head>
 <body>
 <div class=\"navbar-header\">
 <h2>Страница пользователя</h2>
 <br>
-    <ul class=\"nav nav-tabs\">
+    <ul class=\"nav nav-pills\">
         <li class=\"active\"> <a data-toggle=\"tab\" href=\"#panel1\">Приветствие</a></li>
         <li ><a href=\"pogoda.php\">Погода</a></li>
         <li> <a href=\"beckup.php\">Обратная связь</a></li>
@@ -33,11 +34,12 @@ else
         <h3>$a</h3>
     </div>
 </div>        
-</body>
+
 <form role=\"form\" action=\"exit.php\" method=\"SESSION\">
 <br>
 <button type=\"submit\" class=\"btn btn-success\">Выйти</button>
 </form>
+</body>
 </html>";
 } } else {?>
 <html>
@@ -48,7 +50,7 @@ else
 <div class="navbar-header">
 <h2>Главная страница</h2>
     <br>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-pills">
         <li class="active"><a data-toggle="tab" href="#panel1">Вход</a></li>
         <li> <a href="reg.php">Регистрация</a></li>
         <li> <a href="beckup2.php">Обратная связь</a></li>

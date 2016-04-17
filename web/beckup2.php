@@ -6,9 +6,9 @@
 </head>
 <body>
 <div class="navbar-header">
-    <h2>Страница пользователя</h2>
+    <h2>Главная страница</h2>
     <br>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-pills">
         <li ><a href="index.php">Вход</a></li>
         <li> <a href="reg.php">Регистрация</a></li>
         <li class="active"> <a data-toggle="tab" href="beckup2.php">Обратная связь</a></li>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group">
                     <label for="comment">Оставить Отзыв:</label>
-                    <input name="comment" type="text" class="form-control" id="comment" required >
+                    <input name="comment" type="text" class="form-control" id="comment" style="height:150px " required >
                     <br>
                 </div>
                 <img src="capcha.php" alt="защитный код">

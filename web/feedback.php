@@ -8,7 +8,7 @@
 <div class="navbar-header">
     <h2>Страница пользователя</h2>
     <br>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-pills">
         <li><a href="index.php">Приветствие</a></li>
         <li><a href="pogoda.php">Погода</a></li>
         <li><a href="beckup.php">Обратная связь</a></li>

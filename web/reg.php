@@ -8,10 +8,10 @@
 <div class="navbar-header">
     <h2>Регистрация</h2>
     <br>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-pills">
         <li><a href="index.php">Вход</a></li>
         <li class="active"> <a data-toggle="tab" href="reg.php">Регистрация</a></li>
-        <li> <a href="beckup.php">Обратная связь</a></li>
+        <li> <a href="beckup2.php">Обратная связь</a></li>
     </ul>
     <br>
 <div class="tab-content">
@@ -44,7 +44,7 @@
     <label for="login">Login:</label>
     <input name="login" type="text" class="form-control" id="login" required>
 </div>
-<div class="form-group"
+<div class="form-group">
     <label for="password">Пароль:</label>
     <input name="password" type="password" class="form-control" id="password" required>
 </div>

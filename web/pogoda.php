@@ -8,33 +8,13 @@
 <div class="navbar-header">
     <h2>Страница пользователя</h2>
     <br>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-pills">
     <li> <a href="index.php">Приветствие</a></li>
     <li class="active"><a data-toggle="tab" href="pogoda.php">Погода</a></li>
     <li> <a href="beckup.php">Обратная связь</a></li>
     <li> <a href="feedback.php">Коментарии</a></li>
     </ul>
     <br>
-    <!--   <div class="tab-content">
-           <div id="index.php" class="tab-pane fade in active">
-           <h3>$a</h3>
-       </div>
-   </div>
-
-   <form role=\"form\" action=\"testreg.php\" method=\"post\" >
-   <div class=\"form-group\">
-      <label for=\"login\">Ваш логин:</label>
-      <input name=\"login\" type=\"text\" class=\"form-control\" id=\"login\" >
-   </div>
-   <div class=\"form-group\">
-      <label for=\"password\">Ваш пароль:</label>
-      <input type=\"password\" name=\"password\" class=\"form-control\" id=\"password\">
-   </div>
-      <button type=\"submit\" class=\"btn btn-success\">Войти</button>
-      <br>
-   </form>
-          </div>
-   </div>-->
 </body>
 </html>
 <?php

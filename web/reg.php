@@ -31,7 +31,7 @@
 </div>
 <div class="form-group">
     <label for="sex">Ваш пол:</label>
-            <select name="sex" >
+            <select name="sex" class="form-control" id="sex">
                 <option value="m"> мужской </option>
                 <option value="f"> женский </option>
             </select>

@@ -1,34 +1,47 @@
 <html xmlns:h="http://www.w3.org/1999/XSL/Transform">
 <meta charset="utf-8">
+<link href = "css/bootstrap.css" rel="stylesheet">
 <head>
     <title>Обратная связь</title>
 </head>
 <body>
-<h2>Обратная связь</h2>
-<form action="beckup.php" method="post">
-    <p>
-        <label>Имя пользователя:<br></label>
-        <input name="name" type="text" size="15" maxlength="15"    required="true">
-    </p>
-    <p>
-        <label>Email:<br></label>
-        <input name="email" type="email" size="15"  maxlength="25" required="true">
-    </p>
-    <p>
-        <label>Оставить Отзыв:<br></label>
-        <textarea name="comment" cols="40" rows="7" required="true"></textarea>
-        <!--<input name="comment" type="text" size="30" weight="50" maxlength="100">-->
-    </p>
-    <p>
-        <img src="capcha.php" alt="защитный код">
-    </p>
-    <p>
-        <input name="capcha" type="text" size="15"  maxlength="25" required="true">
-    </p>
-    <p>
-        <input type="submit" name="submit" value="Отправить отзыв">
-    </p>
+<div class="navbar-header">
+    <h2>Страница пользователя</h2>
+    <br>
+    <ul class="nav nav-tabs">
+        <li ><a href="index.php">Приветствие</a></li>
+        <li ><a href="pogoda.php">Погода</a></li>
+        <li class="active"> <a data-toggle="tab" href="beckup.php">Обратная связь</a></li>
+        <li> <a href="feedback.php">Коментарии</a></li>
+    </ul>
+<div class="tab-content">
+    <div id="beckup.php" class="tab-pane fade in active">
+        <h3>Обратная связь</h3>
+        <br>
+<form data-toggle="validator" role="form" action="beckup.php" method="post">
+    <div class="form-group">
+        <label for="name">Имя пользователя:</label>
+        <input name="name" type="text" class="form-control" id="name" placeholder="Введите имя" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input name="email" type="email" class="form-control" id="email" placeholder="email" required>
+    </div>
+    <div class="form-group">
+        <label for="comment">Оставить Отзыв:</label>
+        <input name="comment" type="text" class="form-control" id="comment" required >
+    <br>
+    </div>
+    <img src="capcha.php" alt="защитный код">
+    <div class="form-group" style="margin-top: 10px;">
+    <input name="capcha" type="text" class="form-group" >
+    </div>
+        <button type="submit" class="btn btn-success">Отправить отзыв</button>
+        <!--<input type="submit" name="submit" value="Отправить отзыв">-->
 </form>
+</div>
+</div>
+</div>
 </body>
 </html>
 <?php
@@ -66,3 +79,4 @@ else {
 
 }}
 ?>
+

@@ -1,6 +1,5 @@
 <html>
 <meta charset="utf-8">
-<link href = "css/bootstrap.css" rel="stylesheet">
 </html>
 <?php
 if (isset($_POST['name'])) { $name = $_POST['name']; if ($name == '') { unset($name);} }

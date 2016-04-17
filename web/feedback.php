@@ -3,16 +3,25 @@
 <link href = "css/bootstrap.css" rel="stylesheet">
 <head>
     <title>Фидбэк</title>
-    </head>
-
+</head>
+<body>
+<div class="navbar-header">
+    <h2>Страница пользователя</h2>
+    <br>
+    <ul class="nav nav-tabs">
+        <li><a href="index.php">Приветствие</a></li>
+        <li><a href="pogoda.php">Погода</a></li>
+        <li><a href="beckup.php">Обратная связь</a></li>
+        <li class="active"> <a data-toggle="tab" href="feedback.php">Коментарии</a></li>
+    </ul>
 <?php
 include ("bd.php");
-
 $result = $conn->query('SELECT * FROM beckup ');
 foreach($result as $myrow) {
-    echo '<p>Пользователь - '.$myrow['name'].'.<br> Текст сообщения: '.$myrow['comment'].'</p>';
+    echo '<p><br>Пользователь - '.$myrow['name'].'.<br> Текст сообщения: '.$myrow['comment'].'</p>';
 };
 
 ?>
-
+</div>
+</body>
 </html>

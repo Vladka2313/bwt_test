@@ -32,21 +32,19 @@ require "header.php";
     </div>
     <div class="form-group" >
         <label for="comment">Оставить Отзыв:</label>
-        <input name="comment" type="text" class="form-control" id="comment" style="height:150px " required >
-    <br>
+        <div class="row">
+            <div class="col-xs-12">
+        <textarea name="comment" type="text" class="form-control" id="comment"   required ></textarea>
+                </div>
+        </div>
     </div>
     <img src="capcha.php" alt="защитный код">
     <div class="form-group" style="margin-top: 10px;">
-    <input name="capcha" type="text" class="form-group" >
+    <input name="capcha" type="text" class="form-group" required >
     </div>
         <button type="submit" class="btn btn-success">Отправить отзыв</button>
         <!--<input type="submit" name="submit" value="Отправить отзыв">-->
-</form>
-</div>
-</div>
-</div>
-</body>
-</html>
+<br>
 <?php
 
 if (isset($_POST['name'])) { $name = $_POST['name']; if ($name == '') { unset($name);} }
@@ -75,11 +73,16 @@ else {
 
     $result2 = $conn->query("INSERT INTO beckup (name,email,comment) VALUES('$name','$email','$comment')");
     if ($result2) {
-        echo "Ваш комментарий успешно отправлен)  <a href='index.php'><br>Главная страница</a>";
+        echo "<br>Ваш комментарий успешно отправлен)  <a href='index.php'><br>Главная страница</a>";
     } else {
         echo "Ошибка!";
     }
 
 }}
 ?>
-
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -7,7 +7,7 @@ require "header.php";
 ?>
 <body>
 <div class="navbar-header">
-    <h2>Регистрация</h2>
+    <h2>Главная страница</h2>
     <br>
     <!--<ul class="nav nav-pills">
         <li><a href="index.php">Вход</a></li>

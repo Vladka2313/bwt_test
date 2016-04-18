@@ -19,7 +19,8 @@ require "header.php";
     <?php
 echo (first_function($mass));
 $result = $conn->query('SELECT * FROM beckup ');
-foreach($result as $myrow) {
+foreach($result as $myrow)
+{
     echo '<p><br>Пользователь - '.$myrow['name'].'.<br> Текст сообщения: '.$myrow['comment'].'</p>';
 };
 

@@ -9,13 +9,7 @@ require "header.php";
 <div class="navbar-header">
     <h2>Главная страница</h2>
     <br>
-    <!--<ul class="nav nav-pills">
-        <li ><a href="index.php">Приветствие</a></li>
-        <li ><a href="pogoda.php">Погода</a></li>
-        <li class="active"> <a data-toggle="tab" href="beckup.php">Обратная связь</a></li>
-        <li> <a href="feedback.php">Коментарии</a></li>
-    </ul>-->
-   <?php
+    <?php
     echo (first_function($mass2));
    ?>
 <div class="tab-content">

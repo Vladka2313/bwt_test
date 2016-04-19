@@ -17,7 +17,7 @@ if (isset($_SESSION['login']))
 if (empty($_SESSION['login']) or empty($_SESSION['id']))
 {
     echo "Вы вошли на сайт, как гость<br >";
-    echo "<br><a href=\"beckup.php\"><br>Обратная связь</a>";
+    echo "<br><a href=\"exit.php\"><br>Выход</a>";
 }
 else
 {
@@ -25,14 +25,7 @@ else
     echo "
 <div class=\"navbar-header\">
 <h2>Страница пользователя</h2>
-<br>
-    <!-- <ul class=\"nav nav-pills\">
-        <li class=\"active\"> <a data-toggle=\"tab\" href=\"#panel1\">Приветствие</a></li>
-        <li ><a href=\"pogoda.php\">Погода</a></li>
-        <li> <a href=\"beckup.php\">Обратная связь</a></li>
-        <li> <a href=\"feedback.php\">Коментарии</a></li>
-        </ul>-->
-     ";
+<br>";
     echo (first_function($mass));
  echo"
 <div class=\"tab-content\">
@@ -53,16 +46,10 @@ else
     <?php
     echo (first_function($mass2));
     ?>
-    <!--
-    <ul class="nav nav-pills">
-        <li class="active"><a data-toggle="tab" href="#panel1">Вход</a></li>
-        <li> <a href="reg.php">Регистрация</a></li>
-        <li> <a href="beckup2.php">Обратная связь</a></li>
-        </ul>-->
-<div class="tab-content">
+ <div class="tab-content">
     <div id="panel1" class="tab-pane fade in active">
-        <h3>Вход</h3>
-<?php
+       <br>
+        <?php
 if (empty($_SESSION['login']) or empty($_SESSION['id']))
 {
     echo "Вы вошли на сайт, как гость";

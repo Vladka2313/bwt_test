@@ -9,11 +9,6 @@ require "header.php";
 <div class="navbar-header">
     <h2>Главная страница</h2>
     <br>
-    <!--<ul class="nav nav-pills">
-        <li><a href="index.php">Вход</a></li>
-        <li class="active"> <a data-toggle="tab" href="reg.php">Регистрация</a></li>
-        <li> <a href="beckup2.php">Обратная связь</a></li>
-    </ul>-->
     <?php
     echo (first_function($mass2));
     ?>

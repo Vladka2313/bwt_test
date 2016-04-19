@@ -1,7 +1,7 @@
-<html>
-<meta charset="utf-8">
-</html>
 <?php
+session_start();
+$title = "<title > Погода </title >";
+require "header.php";
 if (isset($_POST['name'])) { $name = $_POST['name']; if ($name == '') { unset($name);} }
 if (isset($_POST['last_name'])) { $last_name = $_POST['last_name']; if ($last_name == '') { unset($last_name);} }
 if (isset($_POST['date'])) { $date = $_POST['date']; }
@@ -10,13 +10,13 @@ if (isset($_POST['email'])) { $email = $_POST['email']; if ($email == '') { unse
 if (isset($_POST['login'])) { $login = $_POST['login']; if ($login == '') { unset($login);} }
 if (isset($_POST['password'])) { $password=$_POST['password']; if ($password =='') { unset($password);} }
 
-echo "<html>
+echo "
     <form action=\"save_user.php\" method=\"post\">
     <label>Ваше имя:<br></label>
     <input name=\"name\" type=\"text\" size=\"15\" maxlength=\"15\">
     <input type=\"submit\" name=\"submit\" value=\"Проверка\">
 </form>
-</html>";
+";
 if (isset($_POST['name'])){
     if (empty($_POST['name']))
 {
@@ -77,10 +77,14 @@ $result2 = $conn->query ("INSERT INTO reg (name,last_name,date,sex,email,login,p
 
 if ($result2)
 {
-    echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='index.php'><br>Главная страница</a>";
+    echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <!--<a href='index.php'><br>Главная страница</a>--><br>".
+    "<br><form action=\"index.php\">
+    <button type=\"submit\" class=\"btn btn-success\">Войти</button>
+    </form>";
+
 }
 else {
     echo "Ошибка! Вы не зарегистрированы.";
 }}
 ?>
-
+</html>
